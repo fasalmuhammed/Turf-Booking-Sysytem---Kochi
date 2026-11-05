@@ -1,0 +1,30 @@
+{
+  "name": "turf-booking-whatsapp",
+  "version": "1.0.0",
+  "description": "WhatsApp-based turf booking management system (WhatsApp Cloud API + Node.js + SQLite)",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "dev": "tsx watch --env-file-if-exists=.env src/index.ts",
+    "start": "node --env-file-if-exists=.env dist/src/index.js",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "tsx --test test/*.test.ts",
+    "create-admin": "tsx --env-file-if-exists=.env scripts/create-admin.ts",
+    "seed": "tsx --env-file-if-exists=.env scripts/seed.ts"
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.6",
+    "@types/qrcode": "^1.5.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
